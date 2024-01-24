@@ -38,6 +38,8 @@ def button_antwortenauswahl():
 def antwort_3_ausgewaehlt():
    print("antwort 3 ooo ausgewählt")
 
+bt.antwort_3.config(command=antwort_3_ausgewaehlt)
+
 
 if startscreen == True:
    startscreen = False
