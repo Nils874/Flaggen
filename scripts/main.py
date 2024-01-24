@@ -36,7 +36,7 @@ def button_antwortenauswahl():
       bt.antwort_3.config(text=f"{vb.laendername}")
 
 def antwort_3_ausgewaehlt():
-   print("antwort 3 ausgewählt")
+   print("antwort 3 ooo ausgewählt")
 
 
 if startscreen == True:
