@@ -6,21 +6,17 @@ import variablen as vb
 from random import randint
 import bilder as bd
 
-def hide_all():
-    for element in bt.liste_alle_elemente:
-        element.place_forget()
-    for land in bd.liste_alle_laender:
-        land.place_forget()
-
 
 def flaggenrunde_start():
-    hide_all()
-
+    for element in bt.liste_alle_elemente:
+        element.place_forget()
+    flaggenrunde()
 
 def flaggenrunde():
-    hide_all()
+    for element in bt.liste_alle_elemente:
+        element.place_forget()
     vb.laenderbutton_richtig = randint(1, 3)
-    print(f"Zahl: {vb.laenderbutton_richtig}")
+    vb.aktuelles_land = randint(bd.liste_alle_laender)
 
 def antwort_1_ausgewaehlt():
     print("Hallo")
