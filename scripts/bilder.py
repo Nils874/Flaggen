@@ -6,3 +6,5 @@ deutschlandflagge_import = ImageTk.PhotoImage(Image.open("..\\bilder\\deutschlan
 deutschlandflagge = Label(fs.root, image=deutschlandflagge_import)
 afghanistanflagge_import = ImageTk.PhotoImage(Image.open("..\\bilder\\afghanistan.jpg"))
 afghanistanflagge = Label(fs.root, image=afghanistanflagge_import)
+
+liste_alle_laender = [deutschlandflagge, afghanistanflagge]

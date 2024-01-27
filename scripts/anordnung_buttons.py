@@ -17,3 +17,8 @@ startbutton_width = 100
 startbutton_height = 100
 startbutton_relx = 0.45
 startbutton_rely = 0.45
+
+hintergrundfarbe_aendern_width = 100
+hintergrundfarbe_aendern_height = 40
+hintergrundfarbe_aendern_relx = 0.0
+hintergrundfarbe_aendern_rely = 0.0
