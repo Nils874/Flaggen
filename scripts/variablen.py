@@ -19,9 +19,12 @@ antwort_3_height = 40
 antwort_3_relx = 0.7
 antwort_3_rely = 0.8
 
+startbutton_width = 100
+startbutton_height = 100
+startbutton_relx = 0.45
+startbutton_rely = 0.45
 
 
-startscreen = True
 
 
 alle_laender = ["deutschland", "afghanistan"]

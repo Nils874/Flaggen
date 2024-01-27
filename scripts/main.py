@@ -8,7 +8,7 @@ import laenderwahl as lw
 
 
 
-
+startscreen = True
 
 def flaggenrunde():
    vb.laender_nummer = randint(1, vb.gesammt_laender_anzahl)
@@ -17,14 +17,8 @@ def flaggenrunde():
    bt.antwort_2.place(width=vb.antwort_2_width, height=vb.antwort_2_height, relx=vb.antwort_2_relx, rely=vb.antwort_2_rely)
    bt.antwort_3.place(width=vb.antwort_3_width, height=vb.antwort_3_height, relx=vb.antwort_3_relx, rely=vb.antwort_3_rely)
 
-def zufaellige_flaggenwahl():
-   if vb.laender_nummer == 1:
-      bd.deutschlandflagge.pack(pady=100)
-      vb.laendername = "Deutschland"
-   elif vb.laender_nummer == 2:
-      bd.afghanistanflagge.pack(pady=100)
-      vb.laendername = "Afghanistan"
-   button_antwortenauswahl()
+def startmenue():
+   bt.startbutton.place(width)
 
 def button_antwortenauswahl():
    if vb.laenderbutton_richtig == 1:
@@ -42,7 +36,6 @@ bt.antwort_3.config(command=antwort_3_ausgewaehlt)
 
 if startscreen == True:
    startscreen = False
-   flaggenrunde()
-
+   startmenue()
 
 fs.root.mainloop()
