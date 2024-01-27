@@ -4,11 +4,11 @@ import bilder as bd
 import variablen as vb
 import fenstersettings as fs
 from random import randint
+import laenderwahl as lw
 
 
 
 
-startscreen = True
 
 def flaggenrunde():
    vb.laender_nummer = randint(1, vb.gesammt_laender_anzahl)
@@ -27,7 +27,6 @@ def zufaellige_flaggenwahl():
    button_antwortenauswahl()
 
 def button_antwortenauswahl():
-   vb.laenderbutton_richtig = randint(1, 3)
    if vb.laenderbutton_richtig == 1:
       bt.antwort_1.config(text=f"{vb.laendername}")
    elif vb.laenderbutton_richtig == 2:

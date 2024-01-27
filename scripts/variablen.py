@@ -19,4 +19,9 @@ antwort_3_height = 40
 antwort_3_relx = 0.7
 antwort_3_rely = 0.8
 
+
+
+startscreen = True
+
+
 alle_laender = ["deutschland", "afghanistan"]
