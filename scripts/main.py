@@ -18,7 +18,7 @@ def flaggenrunde():
    bt.antwort_3.place(width=vb.antwort_3_width, height=vb.antwort_3_height, relx=vb.antwort_3_relx, rely=vb.antwort_3_rely)
 
 def startmenue():
-   bt.startbutton.place(width)
+   bt.startbutton.place(width=vb)
 
 def button_antwortenauswahl():
    if vb.laenderbutton_richtig == 1:
