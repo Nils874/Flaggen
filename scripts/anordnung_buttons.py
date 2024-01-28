@@ -22,3 +22,13 @@ hintergrundfarbe_aendern_width = 100
 hintergrundfarbe_aendern_height = 40
 hintergrundfarbe_aendern_relx = 0.0
 hintergrundfarbe_aendern_rely = 0.8
+
+einstellungen_button_width = 80
+einstellungen_button_height = 40
+einstellungen_button_relx = 0.0
+einstellungen_button_rely = 0.0
+
+einstellungen_background_width = 1000
+einstellungen_background_height = 1000
+einstellungen_background_relx = 0.0
+einstellungen_background_rely = 0.0
