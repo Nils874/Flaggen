@@ -4,6 +4,7 @@ import variablen as vb
 import anordnung_buttons
 import fenstersettings as fs
 import labels as lb
+aktuelle_farbe = "white"
 
 def hintergrundfarbe_aendern():
     #auf dunkles design schalten
