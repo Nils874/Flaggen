@@ -30,7 +30,10 @@ def flaggenrunde():
     bd.aktuelle_flagge_bild_import = ImageTk.PhotoImage(Image.open(f"..\\bilder\\{vb.aktuelles_land}.jpg"))
     bd.aktuelle_flagge_bild.config(image=bd.aktuelle_flagge_bild_import)
     bd.aktuelle_flagge_bild.pack(pady=50)
-
+    bt.antwort_1.place(width=ab.antwort_1_width, height=ab.antwort_1_height, relx=ab.antwort_1_relx, rely=ab.antwort_1_rely)
+    bt.antwort_2.place(width=ab.antwort_2_width, height=ab.antwort_2_height, relx=ab.antwort_2_relx, rely=ab.antwort_2_rely)
+    bt.antwort_3.place(width=ab.antwort_3_width, height=ab.antwort_3_height, relx=ab.antwort_3_relx, rely=ab.antwort_3_rely)
+    if
 
 
 def antwort_1_ausgewaehlt():
