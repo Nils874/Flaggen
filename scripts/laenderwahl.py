@@ -33,7 +33,23 @@ def flaggenrunde():
     bt.antwort_1.place(width=ab.antwort_1_width, height=ab.antwort_1_height, relx=ab.antwort_1_relx, rely=ab.antwort_1_rely)
     bt.antwort_2.place(width=ab.antwort_2_width, height=ab.antwort_2_height, relx=ab.antwort_2_relx, rely=ab.antwort_2_rely)
     bt.antwort_3.place(width=ab.antwort_3_width, height=ab.antwort_3_height, relx=ab.antwort_3_relx, rely=ab.antwort_3_rely)
-    if
+    vb.erstes_falsches_land = choice(alle_laender)
+    vb.zweites_falsches_land = choice(alle_laender)
+    while vb.aktuelles_land == vb.erstes_falsches_land or vb.aktuelles_land == vb.zweites_falsches_land or vb.erstes_falsches_land == vb.zweites_falsches_land:
+        vb.erstes_falsches_land = choice(alle_laender)
+        vb.zweites_falsches_land = choice(alle_laender)
+    if vb.laenderbutton_richtig == 1:
+        bt.antwort_1.config(text=vb.aktuelles_land)
+        bt.antwort_2.config(text=vb.erstes_falsches_land)
+        bt.antwort_3.config(text=vb.zweites_falsches_land)
+    elif vb.laenderbutton_richtig == 2:
+        bt.antwort_1.config(text=vb.erstes_falsches_land)
+        bt.antwort_2.config(text=vb.aktuelles_land)
+        bt.antwort_3.config(text=vb.zweites_falsches_land)
+    elif vb.laenderbutton_richtig == 3:
+        bt.antwort_1.config(text=vb.erstes_falsches_land)
+        bt.antwort_2.config(text=vb.zweites_falsches_land)
+        bt.antwort_3.config(text=vb.aktuelles_land)
 
 
 def antwort_1_ausgewaehlt():
