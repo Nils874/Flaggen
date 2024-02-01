@@ -9,8 +9,7 @@ import anordnung_buttons as ab
 import variablen as vb
 import farbeinstellung as fe
 import einstellungen
-
-
+from tkinter import Menu, Label
 
 startscreen = True
 
