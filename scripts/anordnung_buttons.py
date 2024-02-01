@@ -42,3 +42,8 @@ punkte_label_width = 100
 punkte_label_height = 40
 punkte_label_relx = 0.45
 punkte_label_rely = 0.0
+
+einstellungen_schliessen_width = 120
+einstellungen_schliessen_height = 40
+einstellungen_schliessen_relx = 0.0
+einstellungen_schliessen_rely = 0.0

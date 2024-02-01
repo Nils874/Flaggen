@@ -12,5 +12,6 @@ einstellungen_button = Button(fs.root, text="einstellungen")
 einstellungen_button_background = Button(fs.root)
 naechste_aufgabe = Button(fs.root, text="nächste Aufgabe")
 punkte = Label(fs.root, text=f"Punkte: ")
+einstellungen_schliessen = Button(fs.root, text="zurück zum Spiel")
 
-liste_alle_buttons = [punkte, naechste_aufgabe, einstellungen_button_background, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]
+liste_alle_buttons = [einstellungen_schliessen, punkte, naechste_aufgabe, einstellungen_button_background, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]

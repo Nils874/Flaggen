@@ -69,7 +69,6 @@ def flaggenrunde():
 
 
 
-
 def antwort_1_ausgewaehlt():
     if vb.land_schon_ausgewahelt == True:
         print("Hallo")
