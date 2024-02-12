@@ -10,6 +10,7 @@ land_schon_ausgewahelt = False
 antwort_1_falsch = "green"
 antwort_2_falsch = "green"
 antwort_3_falsch = "green"
+aktueller_modi = ""
 
 #hintergrundfarbe
 hintergrundfarbe_welches_design = "white"

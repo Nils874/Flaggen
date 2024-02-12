@@ -12,16 +12,33 @@ from PIL import Image, ImageTk
 alle_laender = []
 aufgabe_richtig_ = ""
 
+def modi_wahl():
+    for i in bt.liste_alle_buttons:
+        i.place_forget()
+    bt.europa_flaggen_auswahl.place(width=ab.europa_flaggen_auswahl_width, height=ab.europa_flaggen_auswahl_height, relx=ab.europa_flaggen_auswahl_relx, rely=ab.europa_flaggen_auswahl_rely)
+    bt.alle_flaggen_auswahl.place(width=ab.alle_flaggen_auswahl_width, height=ab.alle_flaggen_auswahl_height, relx=ab.alle_flaggen_auswahl_relx, rely=ab.alle_flaggen_auswahl_rely)
+
 import time
 for land in os.listdir("..\\bilder"):
     f = os.path.join("..\\bilder", land)
     if os.path.isfile(f):
         landname = land[:-4]
         alle_laender.append(landname)
+
+
 def flaggenrunde_start():
     for element in bt.liste_alle_buttons:
         element.place_forget()
     vb.punkte = 0
+    vb.aktueller_modi = "alle_laender"
+    flaggenrunde()
+
+def europa_flaggenrunde_start():
+    for i in bt.liste_alle_buttons:
+        i.place_forget()
+    vb.punkte = 0
+    print("Hallo")
+    vb.aktueller_modi = "europa_laender"
     flaggenrunde()
 
 def flaggenrunde():
@@ -38,7 +55,10 @@ def flaggenrunde():
     bt.punkte.place(width=ab.punkte_label_width, height=ab.punkte_label_height, relx=ab.punkte_label_relx, rely=ab.punkte_label_rely)
     bt.punkte.config(text=f"Punkte: {vb.punkte}")
     vb.laenderbutton_richtig = randint(1, 3)
-    vb.aktuelles_land = choice(alle_laender)
+    if vb.aktueller_modi == "alle_laender":
+        vb.aktuelles_land = choice(alle_laender)
+    elif vb.aktueller_modi == "europa_laender":
+        vb.aktuelles_land = choice(bd.laender_europa)
     print(vb.aktuelles_land)
     bd.aktuelle_flagge_bild_import = ImageTk.PhotoImage(Image.open(f"..\\bilder\\{vb.aktuelles_land}.jpg"))
     bd.aktuelle_flagge_bild.config(image=bd.aktuelle_flagge_bild_import)
@@ -46,11 +66,19 @@ def flaggenrunde():
     bt.antwort_1.place(width=ab.antwort_1_width, height=ab.antwort_1_height, relx=ab.antwort_1_relx, rely=ab.antwort_1_rely)
     bt.antwort_2.place(width=ab.antwort_2_width, height=ab.antwort_2_height, relx=ab.antwort_2_relx, rely=ab.antwort_2_rely)
     bt.antwort_3.place(width=ab.antwort_3_width, height=ab.antwort_3_height, relx=ab.antwort_3_relx, rely=ab.antwort_3_rely)
-    vb.erstes_falsches_land = choice(alle_laender)
-    vb.zweites_falsches_land = choice(alle_laender)
-    while vb.aktuelles_land == vb.erstes_falsches_land or vb.aktuelles_land == vb.zweites_falsches_land or vb.erstes_falsches_land == vb.zweites_falsches_land:
+    if vb.aktueller_modi == "alle_laender":
         vb.erstes_falsches_land = choice(alle_laender)
         vb.zweites_falsches_land = choice(alle_laender)
+    elif vb.aktueller_modi == "europa_laender":
+        vb.erstes_falsches_land = choice(bd.laender_europa)
+        vb.zweites_falsches_land = choice(bd.laender_europa)
+    while vb.aktuelles_land == vb.erstes_falsches_land or vb.aktuelles_land == vb.zweites_falsches_land or vb.erstes_falsches_land == vb.zweites_falsches_land:
+        if vb.aktueller_modi == "alle laender":
+            vb.erstes_falsches_land = choice(alle_laender)
+            vb.zweites_falsches_land = choice(alle_laender)
+        elif vb.aktueller_modi == "europa_laender":
+            vb.erstes_falsches_land = choice(bd.laender_europa)
+            vb.zweites_falsches_land = choice(bd.laender_europa)
     if vb.laenderbutton_richtig == 1:
         bt.antwort_1.config(text=vb.aktuelles_land)
         bt.antwort_2.config(text=vb.erstes_falsches_land)
@@ -63,8 +91,6 @@ def flaggenrunde():
         bt.antwort_1.config(text=vb.erstes_falsches_land)
         bt.antwort_2.config(text=vb.zweites_falsches_land)
         bt.antwort_3.config(text=vb.aktuelles_land)
-
-
 
 
 def antwort_1_ausgewaehlt():
@@ -127,5 +153,7 @@ def ergebnischeck():
 bt.antwort_1.config(command=antwort_1_ausgewaehlt)
 bt.antwort_2.config(command=antwort_2_ausgewaehlt)
 bt.antwort_3.config(command=antwort_3_ausgewaehlt)
-bt.startbutton.config(command=flaggenrunde_start)
+bt.startbutton.config(command=modi_wahl)
 bt.naechste_aufgabe.config(command=flaggenrunde)
+bt.europa_flaggen_auswahl.config(command=europa_flaggenrunde_start)
+bt.alle_flaggen_auswahl.config(command=flaggenrunde_start)

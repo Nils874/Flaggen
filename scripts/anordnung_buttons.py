@@ -28,11 +28,6 @@ einstellungen_button_height = 40
 einstellungen_button_relx = 0.0
 einstellungen_button_rely = 0.0
 
-einstellungen_background_width = 1000
-einstellungen_background_height = 1000
-einstellungen_background_relx = 0.0
-einstellungen_background_rely = 0.0
-
 naechste_aufgabe_width = 110
 naechste_aufgabe_height = 40
 naechste_aufgabe_relx = 0.45
@@ -47,3 +42,17 @@ einstellungen_schliessen_width = 120
 einstellungen_schliessen_height = 40
 einstellungen_schliessen_relx = 0.0
 einstellungen_schliessen_rely = 0.0
+
+alle_flaggen_auswahl_width = 200
+alle_flaggen_auswahl_height = 40
+alle_flaggen_auswahl_relx = 0.45
+alle_flaggen_auswahl_rely = 0.2
+
+europa_flaggen_auswahl_width = 200
+europa_flaggen_auswahl_height = 40
+europa_flaggen_auswahl_relx = 0.45
+europa_flaggen_auswahl_rely = 0.4
+
+runde_beenden_width = 150
+runde_beenden_height = 40
+runde_beenden_relx =

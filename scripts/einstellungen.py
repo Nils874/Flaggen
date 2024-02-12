@@ -23,6 +23,7 @@ def einstellungen_schliessen():
     bt.antwort_2.place(width=ab.antwort_2_width, height=ab.antwort_2_height, relx=ab.antwort_2_relx, rely=ab.antwort_2_rely)
     bt.antwort_3.place(width=ab.antwort_3_width, height=ab.antwort_3_height, relx=ab.antwort_3_relx, rely=ab.antwort_3_rely)
     bd.aktuelle_flagge_bild.config(image=bd.aktuelle_flagge_bild_import)
+    bt.einstellungen_button.place(width=ab.einstellungen_button_width, height=ab.einstellungen_button_height, relx=ab.einstellungen_button_relx, rely=ab.einstellungen_button_rely)
 
 
 bt.einstellungen_schliessen.config(command=einstellungen_schliessen)
