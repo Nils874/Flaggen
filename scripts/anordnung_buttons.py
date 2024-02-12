@@ -82,3 +82,23 @@ programm_schliessen_abbrechen_width = 100
 programm_schliessen_abbrechen_height = 40
 programm_schliessen_abbrechen_relx = 0.6
 programm_schliessen_abbrechen_rely = 0.48
+
+flaggen_challenge_width = 100
+flaggen_challenge_height = 40
+flaggen_challenge_relx = 0.4
+flaggen_challenge_rely = 0.45
+
+flaggen_lernen_width = 100
+flaggen_lernen_height = 40
+flaggen_lernen_relx = 0.6
+flaggen_lernen_rely = 0.45
+
+welcher_modus_anzeige_width = 200
+welcher_modus_anzeige_height = 40
+welcher_modus_anzeige_relx = 0.1
+welcher_modus_anzeige_rely = 0.0
+
+streak_vorbei_width = 200
+streak_vorbei_height = 80
+streak_vorbei_relx = 0.4
+streak_vorbei_rely = 0.5

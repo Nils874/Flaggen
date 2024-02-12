@@ -12,6 +12,9 @@ antwort_1_falsch = "green"
 antwort_2_falsch = "green"
 antwort_3_falsch = "green"
 aktueller_modi = ""
+bereich = ""
+punkte_schon_berechnet = False
+
 
 #hintergrundfarbe
 hintergrundfarbe_welches_design = "white"

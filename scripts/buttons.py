@@ -20,6 +20,12 @@ nach_runde_zu_startmenue = Button(fs.root, text="Zum Startmenü")
 programm_schliessen = Button(fs.root, text="Programm schliessen")
 programm_schliessen_abschliessen = Button(fs.root, text="schliessen")
 programm_schliessen_abbrechen = Button(fs.root, text="abbrechen")
+flaggen_challenge = Button(fs.root, text="challenge")
+flaggen_lernen = Button(fs.root, text="lernen")
+welcher_modus_anzeige = Label(fs.root, text="")
+streak_vorbei = Label(fs.root, text="""Du hast ein fehler
+    gemacht und hast verloren""")
+timer = Label(fs.root, text=f"Verbleibende Zeit")
 
 
-liste_alle_buttons = [programm_schliessen_abschliessen, programm_schliessen_abbrechen, programm_schliessen, nach_runde_zu_startmenue, noch_eine_runde, runde_beenden, alle_flaggen_auswahl, europa_flaggen_auswahl, einstellungen_schliessen, punkte, naechste_aufgabe, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]
+liste_alle_buttons = [streak_vorbei, welcher_modus_anzeige, flaggen_challenge, flaggen_lernen, programm_schliessen_abschliessen, programm_schliessen_abbrechen, programm_schliessen, nach_runde_zu_startmenue, noch_eine_runde, runde_beenden, alle_flaggen_auswahl, europa_flaggen_auswahl, einstellungen_schliessen, punkte, naechste_aufgabe, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]
