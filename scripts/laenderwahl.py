@@ -150,6 +150,18 @@ def ergebnischeck():
     vb.antwort_2_falsch = "green"
     vb.antwort_3_falsch = "green"
 
+def noch_eine_runde():
+    vb.punkte = 0
+    flaggenrunde()
+
+
+def runde_beenden():
+    for i in bt.liste_alle_buttons:
+        i.place_forget()
+    bt.noch_eine_runde.place(width=ab.noch_eine_runde_width, height=ab.noch_eine_runde_height, relx=ab.noch_eine_runde_relx, rely=ab.noch_eine_runde_rely)
+    bt.nach_runde_zu_startmenue.place(width=ab.nach_runde_zu_startmenue_width, height=ab.nach_runde_zu_startmenue_height, relx=ab.nach_runde_zu_startmenue_relx, rely=ab.nach_runde_zu_startmenue_rely)
+
+#command für Buttons
 bt.antwort_1.config(command=antwort_1_ausgewaehlt)
 bt.antwort_2.config(command=antwort_2_ausgewaehlt)
 bt.antwort_3.config(command=antwort_3_ausgewaehlt)
@@ -157,3 +169,5 @@ bt.startbutton.config(command=modi_wahl)
 bt.naechste_aufgabe.config(command=flaggenrunde)
 bt.europa_flaggen_auswahl.config(command=europa_flaggenrunde_start)
 bt.alle_flaggen_auswahl.config(command=flaggenrunde_start)
+bt.runde_beenden.config(command=runde_beenden)
+bt.noch_eine_runde.config(command=noch_eine_runde)

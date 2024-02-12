@@ -6,6 +6,7 @@ aktuelles_land = ""
 erstes_falsches_land = ""
 zweites_falsches_land = ""
 land_schon_ausgewahelt = False
+punkte = 0
 
 antwort_1_falsch = "green"
 antwort_2_falsch = "green"

@@ -55,4 +55,30 @@ europa_flaggen_auswahl_rely = 0.4
 
 runde_beenden_width = 150
 runde_beenden_height = 40
-runde_beenden_relx =
+runde_beenden_relx = 0.45
+runde_beenden_rely = 0.8
+
+noch_eine_runde_width = 200
+noch_eine_runde_height = 40
+noch_eine_runde_relx = 0.1
+noch_eine_runde_rely = 0.8
+
+nach_runde_zu_startmenue_width = 150
+nach_runde_zu_startmenue_height = 40
+nach_runde_zu_startmenue_relx = 0.8
+nach_runde_zu_startmenue_rely = 0.8
+
+programm_schliessen_width = 150
+programm_schliessen_height = 40
+programm_schliessen_relx = 0.0
+programm_schliessen_rely = 0.0
+
+programm_schliessen_abschliessen_width = 100
+programm_schliessen_abschliessen_height = 40
+programm_schliessen_abschliessen_relx = 0.4
+programm_schliessen_abschliessen_rely = 0.48
+
+programm_schliessen_abbrechen_width = 100
+programm_schliessen_abbrechen_height = 40
+programm_schliessen_abbrechen_relx = 0.6
+programm_schliessen_abbrechen_rely = 0.48

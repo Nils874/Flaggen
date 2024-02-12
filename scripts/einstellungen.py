@@ -13,7 +13,8 @@ def einstellungen_oeffnen():
     einstellungen_offen_ = True
     bt.hintergrundfarbe_aendern.place(width=ab.hintergrundfarbe_aendern_width, height=ab.hintergrundfarbe_aendern_height, relx=0.43, rely=0.3)
     bt.einstellungen_schliessen.place(width=ab.einstellungen_schliessen_width, height=ab.einstellungen_schliessen_height, relx=ab.einstellungen_schliessen_relx, rely=ab.einstellungen_schliessen_rely)
-    #bt.einstellungen_button_background.place(width=ab.einstellungen_background_width, height=ab.einstellungen_background_height, relx=ab.einstellungen_background_relx, rely=ab.einstellungen_background_rely)
+    bt.runde_beenden.place(width=ab.runde_beenden_width, height=ab.runde_beenden_height, relx=ab.runde_beenden_relx, rely=ab.runde_beenden_rely)
+
 
 def einstellungen_schliessen():
     for i in bt.liste_alle_buttons:
@@ -25,7 +26,6 @@ def einstellungen_schliessen():
     bd.aktuelle_flagge_bild.config(image=bd.aktuelle_flagge_bild_import)
     bt.einstellungen_button.place(width=ab.einstellungen_button_width, height=ab.einstellungen_button_height, relx=ab.einstellungen_button_relx, rely=ab.einstellungen_button_rely)
 
-
+#commands für Buttons
 bt.einstellungen_schliessen.config(command=einstellungen_schliessen)
-
 bt.einstellungen_button.config(command=einstellungen_oeffnen)

@@ -15,5 +15,11 @@ einstellungen_schliessen = Button(fs.root, text="zurück zum Spiel")
 alle_flaggen_auswahl = Button(fs.root, text="Alle Flaggen")
 europa_flaggen_auswahl = Button(fs.root, text="Europaflaggen")
 runde_beenden = Button(fs.root, text="Runde Aufgeben")
+noch_eine_runde = Button(fs.root, text="noch eine Runde")
+nach_runde_zu_startmenue = Button(fs.root, text="Zum Startmenü")
+programm_schliessen = Button(fs.root, text="Programm schliessen")
+programm_schliessen_abschliessen = Button(fs.root, text="schliessen")
+programm_schliessen_abbrechen = Button(fs.root, text="abbrechen")
 
-liste_alle_buttons = [runde_beenden, alle_flaggen_auswahl, europa_flaggen_auswahl, einstellungen_schliessen, punkte, naechste_aufgabe, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]
+
+liste_alle_buttons = [programm_schliessen_abschliessen, programm_schliessen_abbrechen, programm_schliessen, nach_runde_zu_startmenue, noch_eine_runde, runde_beenden, alle_flaggen_auswahl, europa_flaggen_auswahl, einstellungen_schliessen, punkte, naechste_aufgabe, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]
