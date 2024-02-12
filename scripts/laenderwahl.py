@@ -39,19 +39,23 @@ def europa():
     for i in bt.liste_alle_buttons:
         i.place_forget()
     vb.bereich = "europa_laender"
-    flaggenrunde()
+    flaggenrunde_start()
 
 def alle_laender_():
     for i in bt.liste_alle_buttons:
         i.place_forget()
     vb.bereich = "alle_laender"
-    flaggenrunde()
+    flaggenrunde_start()
 
 for land in os.listdir("..\\bilder"):
     f = os.path.join("..\\bilder", land)
     if os.path.isfile(f):
         landname = land[:-4]
         alle_laender.append(landname)
+
+def flaggenrunde_start():
+    vb.punkte = 0
+    flaggenrunde()
 
 def flaggenrunde():
     vb.punkte_schon_berechnet = False
@@ -185,6 +189,14 @@ def noch_eine_runde():
 def runde_beenden():
     for i in bt.liste_alle_buttons:
         i.place_forget()
+    if vb.aktueller_modi == "challenge" and vb.challenge_rekord >= vb.punkte:
+        bt.auswertung_text_nach_runde.config(text=f"""Du hast {vb.punkte} Länder richtig erkannt.
+            Du hast dein Rekord von {vb.challenge_rekord} Ländern leider nicht überboten""")
+    elif vb.aktueller_modi == "challenge" and vb.challenge_rekord < vb.punkte:
+        vb.challenge_rekord = vb.punkte
+        bt.auswertung_text_nach_runde.config(text=f"""Du hast {vb.punkte} richtig hintereinander erkannt
+            und hast damit einen neuen Perönlichen Rekord aufgestellt""")
+    bt.auswertung_text_nach_runde.place(width=ab.auswertung_text_nach_runde_width, height=ab.auswertung_text_nach_runde_height, relx=ab.auswertung_text_nach_runde_relx, rely=ab.auswertung_text_nach_runde_rely)
     bt.runde_beenden.config(text="runde aufgeben")
     bd.aktuelle_flagge_bild.pack_forget()
     bt.noch_eine_runde.place(width=ab.noch_eine_runde_width, height=ab.noch_eine_runde_height, relx=ab.noch_eine_runde_relx, rely=ab.noch_eine_runde_rely)

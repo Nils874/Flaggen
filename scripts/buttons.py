@@ -26,6 +26,7 @@ welcher_modus_anzeige = Label(fs.root, text="")
 streak_vorbei = Label(fs.root, text="""Du hast ein fehler
     gemacht und hast verloren""")
 timer = Label(fs.root, text=f"Verbleibende Zeit")
+auswertung_text_nach_runde = Label(fs.root, text="")
 
 
-liste_alle_buttons = [streak_vorbei, welcher_modus_anzeige, flaggen_challenge, flaggen_lernen, programm_schliessen_abschliessen, programm_schliessen_abbrechen, programm_schliessen, nach_runde_zu_startmenue, noch_eine_runde, runde_beenden, alle_flaggen_auswahl, europa_flaggen_auswahl, einstellungen_schliessen, punkte, naechste_aufgabe, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]
+liste_alle_buttons = [auswertung_text_nach_runde, streak_vorbei, welcher_modus_anzeige, flaggen_challenge, flaggen_lernen, programm_schliessen_abschliessen, programm_schliessen_abbrechen, programm_schliessen, nach_runde_zu_startmenue, noch_eine_runde, runde_beenden, alle_flaggen_auswahl, europa_flaggen_auswahl, einstellungen_schliessen, punkte, naechste_aufgabe, einstellungen_button, infolabel, antwort_3, antwort_2, antwort_1, startbutton, hintergrundfarbe_aendern]

@@ -102,3 +102,8 @@ streak_vorbei_width = 200
 streak_vorbei_height = 80
 streak_vorbei_relx = 0.4
 streak_vorbei_rely = 0.5
+
+auswertung_text_nach_runde_width = 400
+auswertung_text_nach_runde_height = 100
+auswertung_text_nach_runde_relx = 0.35
+auswertung_text_nach_runde_rely = 0.4

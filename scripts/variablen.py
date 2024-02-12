@@ -14,7 +14,7 @@ antwort_3_falsch = "green"
 aktueller_modi = ""
 bereich = ""
 punkte_schon_berechnet = False
-
+challenge_rekord = 0
 
 #hintergrundfarbe
 hintergrundfarbe_welches_design = "white"
