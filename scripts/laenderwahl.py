@@ -11,10 +11,6 @@ import os
 from PIL import Image, ImageTk
 alle_laender = []
 aufgabe_richtig_ = ""
-antwort_1_falsch = "green"
-antwort_2_falsch = "green"
-antwort_3_falsch = "green"
-punkte = 0
 
 import time
 for land in os.listdir("..\\bilder"):
@@ -25,7 +21,7 @@ for land in os.listdir("..\\bilder"):
 def flaggenrunde_start():
     for element in bt.liste_alle_buttons:
         element.place_forget()
-    punkte = 0
+    vb.punkte = 0
     flaggenrunde()
 
 def flaggenrunde():
@@ -40,7 +36,7 @@ def flaggenrunde():
     vb.land_schon_ausgewahelt = False
     bt.einstellungen_button.place(width=ab.einstellungen_button_width, height=ab.einstellungen_button_height, relx=ab.einstellungen_button_relx, rely=ab.einstellungen_button_rely)
     bt.punkte.place(width=ab.punkte_label_width, height=ab.punkte_label_height, relx=ab.punkte_label_relx, rely=ab.punkte_label_rely)
-    bt.punkte.config(text=f"Punkte: {punkte}")
+    bt.punkte.config(text=f"Punkte: {vb.punkte}")
     vb.laenderbutton_richtig = randint(1, 3)
     vb.aktuelles_land = choice(alle_laender)
     print(vb.aktuelles_land)
@@ -79,11 +75,11 @@ def antwort_1_ausgewaehlt():
     elif vb.laenderbutton_richtig == 2:
         bt.antwort_1.config(bg="red")
         bt.antwort_2.config(bg="green")
-        antwort_1_falsch = "red"
+        vb.antwort_1_falsch = "red"
     elif vb.laenderbutton_richtig == 3:
         bt.antwort_1.config(bg="red")
         bt.antwort_3.config(bg="green")
-        antwort_1_falsch = "red"
+        vb.antwort_1_falsch = "red"
     vb.land_schon_ausgewahelt = True
     ergebnischeck()
 def antwort_2_ausgewaehlt():
@@ -92,13 +88,13 @@ def antwort_2_ausgewaehlt():
     elif vb.laenderbutton_richtig == 1:
         bt.antwort_1.config(bg="green")
         bt.antwort_2.config(bg="red")
-        antwort_2_falsch = "red"
+        vb.antwort_2_falsch = "red"
     elif vb.laenderbutton_richtig == 2:
         bt.antwort_2.config(bg="green")
     elif vb.laenderbutton_richtig == 3:
         bt.antwort_2.config(bg="red")
         bt.antwort_3.config(bg="green")
-        antwort_2_falsch = "red"
+        vb.antwort_2_falsch = "red"
     vb.land_schon_ausgewahelt = True
     ergebnischeck()
 def antwort_3_ausgewaehlt():
@@ -107,24 +103,26 @@ def antwort_3_ausgewaehlt():
     elif vb.laenderbutton_richtig == 1:
         bt.antwort_1.config(bg="green")
         bt.antwort_3.config(bg="red")
-        antwort_3_falsch = "red"
+        vb.antwort_3_falsch = "red"
     elif vb.laenderbutton_richtig == 2:
         bt.antwort_2.config(bg="green")
         bt.antwort_3.config(bg="red")
-        antwort_3_falsch = "red"
+        vb.antwort_3_falsch = "red"
     elif vb.laenderbutton_richtig == 3:
         bt.antwort_3.config(bg="green")
     vb.land_schon_ausgewahelt = True
     ergebnischeck()
 
 def ergebnischeck():
-    if antwort_3_falsch != "red" and antwort_2_falsch != "red" and antwort_3_falsch != "red":
-        punkte += 1
-        bt.punkte.config(text=f"Punkte: {punkte}")
+    if vb.antwort_3_falsch != "red" and vb.antwort_2_falsch != "red" and vb.antwort_3_falsch != "red":
+        vb.punkte += 1
+        bt.punkte.config(text=f"Punkte: {vb.punkte}")
     else:
-        punkte =- 1
-        bt.punkte.config(text=f"Punkte: {punkte}")
+        bt.punkte.config(text=f"Punkte: {vb.punkte}")
     bt.naechste_aufgabe.place(width=ab.naechste_aufgabe_width, height=ab.naechste_aufgabe_height, relx=ab.naechste_aufgabe_relx, rely=ab.naechste_aufgabe_rely)
+    vb.antwort_1_falsch = "green"
+    vb.antwort_2_falsch = "green"
+    vb.antwort_3_falsch = "green"
 
 bt.antwort_1.config(command=antwort_1_ausgewaehlt)
 bt.antwort_2.config(command=antwort_2_ausgewaehlt)

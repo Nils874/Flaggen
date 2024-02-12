@@ -7,5 +7,9 @@ erstes_falsches_land = ""
 zweites_falsches_land = ""
 land_schon_ausgewahelt = False
 
+antwort_1_falsch = "green"
+antwort_2_falsch = "green"
+antwort_3_falsch = "green"
+
 #hintergrundfarbe
 hintergrundfarbe_welches_design = "white"
