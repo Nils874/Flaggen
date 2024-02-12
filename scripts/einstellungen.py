@@ -24,6 +24,7 @@ def einstellungen_schliessen():
     bt.antwort_3.place(width=ab.antwort_3_width, height=ab.antwort_3_height, relx=ab.antwort_3_relx, rely=ab.antwort_3_rely)
     bd.aktuelle_flagge_bild.config(image=bd.aktuelle_flagge_bild_import)
 
+
 bt.einstellungen_schliessen.config(command=einstellungen_schliessen)
 
 bt.einstellungen_button.config(command=einstellungen_oeffnen)
